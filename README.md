@@ -1,1 +1,1 @@
-# qaguru
+# qa_guru_course_2
