@@ -24,4 +24,11 @@ public class AlfaBankTests {
         $(byText("Архивные депозиты")).click();
         $$x("//div[@class='col-xs-10 product-cell__cell-box']/div").shouldHave(CollectionCondition.size(3));
     }
+
+    @Test
+    public void checkInsuranceDeposits(){
+        $(byText("Вклады")).click();
+        $("a[href='/make-money/']").parent().sibling(1).$("ul > li").sibling(4).click();
+        $("h1").shouldHave(text("Страхование вкладов"));
+    }
 }
